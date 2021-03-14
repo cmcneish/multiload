@@ -9,4 +9,6 @@ test_exe = executable('multiload_test',
         gtest_dep,
     ])
 
-test('multiload_test', test_exe)
+test('multiload_test',
+    test_exe,
+    workdir : meson.current_build_dir())
